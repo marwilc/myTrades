@@ -1,0 +1,8 @@
+#F57C00 dark primary color
+#FFE0B2 light primary color
+#FF9800 primary color
+#212121 text/icons
+#FF4081 accent color
+#212121 primary text
+#757575 secondary text
+#BDBDBD divider color
