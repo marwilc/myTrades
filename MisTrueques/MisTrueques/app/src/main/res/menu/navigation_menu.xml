@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu   xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+
+
+    <item android:id="@+id/nav_home"
+        android:title="@string/home"
+        android:orderInCategory="100"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_inbox"
+        android:title="@string/inbox"
+        android:orderInCategory="101"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_notifications"
+        android:title="@string/notifications"
+        android:orderInCategory="102"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_status"
+        android:title="@string/status"
+        android:orderInCategory="103"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_sales"
+        android:title="@string/sales"
+        android:orderInCategory="104"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_earnings"
+        android:title="@string/earnings"
+        android:orderInCategory="105"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_services"
+        android:title="@string/services"
+        android:orderInCategory="106"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_buyers_requests"
+        android:title="@string/buyersRequests"
+        android:orderInCategory="107"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_promote_services"
+        android:title="@string/promoteServices"
+        android:orderInCategory="108"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_settings"
+        android:title="@string/settings"
+        android:orderInCategory="109"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_profile"
+        android:title="@string/profile"
+        android:orderInCategory="110"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_support"
+        android:title="@string/support"
+        android:orderInCategory="111"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_view_as_buyer"
+        android:title="@string/viewAsBuyer"
+        android:orderInCategory="112"
+        >
+
+    </item>
+
+    <item android:id="@+id/nav_version"
+        android:title="@string/version"
+        android:orderInCategory="113"
+        >
+
+</item>
+
+
+</menu>
