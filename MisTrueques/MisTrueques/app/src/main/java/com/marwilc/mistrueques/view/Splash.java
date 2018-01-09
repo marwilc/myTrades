@@ -1,4 +1,4 @@
-package com.marwilc.mistrueques;
+package com.marwilc.mistrueques.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.marwilc.mistrueques.R;
 
 public class Splash extends AppCompatActivity {
 
@@ -23,8 +25,12 @@ public class Splash extends AppCompatActivity {
         textView.startAnimation(myAnim);
         imageView.startAnimation(myAnim);
 
+        /**
+         * Inicia la actividad principal
+         */
         final Intent intent = new Intent(this, MainActivity.class);
 
+        // crea el hilo para la actividad principal
         Thread timer = new Thread(){
             public void run (){
                 try {

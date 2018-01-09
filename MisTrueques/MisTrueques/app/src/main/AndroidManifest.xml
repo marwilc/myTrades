@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+        <activity android:name=".view.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +21,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:parentActivityName=".Splash"
+            android:name=".view.MainActivity"
+            android:parentActivityName=".view.Splash"
             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Splash"
+                android:value=".view.Splash"
                 />
 
         </activity>
