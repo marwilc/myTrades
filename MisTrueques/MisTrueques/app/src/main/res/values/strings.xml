@@ -14,5 +14,6 @@
     <string name="profile">Perfil</string>
     <string name="support">Soporte</string>
     <string name="viewAsBuyer">Ver como un comprador</string>
-    <string name="version">version a1.0.1</string>
+    <string name="version">version a1.0.2</string>
+    <string name="Menu">Menu Options</string>
 </resources>

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.marwilc.mistrueques.Splash"
+    tools:context="com.marwilc.mistrueques.view.Splash"
     android:background="@color/colorPrimaryDark"
     >
 
    <LinearLayout
        android:gravity="center"
-       android:layout_width="368dp"
-       android:layout_height="495dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
        android:orientation="vertical">
 
        <ImageView
