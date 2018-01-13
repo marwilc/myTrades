@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts" />
+
         <activity android:name=".view.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +27,7 @@
             android:name=".view.MainActivity"
             android:parentActivityName=".view.Splash"
             >
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.Splash"

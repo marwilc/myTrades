@@ -16,4 +16,6 @@
     <string name="viewAsBuyer">Ver como un comprador</string>
     <string name="version">version a1.0.2</string>
     <string name="Menu">Menu Options</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
 </resources>

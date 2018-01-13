@@ -15,4 +15,6 @@
     <string name="profile">Profile</string>
     <string name="support">Support</string>
     <string name="viewAsBuyer">View as buyer</string>
+    <string name="open"> Open</string>
+    <string name="close"> Close</string>
 </resources>

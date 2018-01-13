@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.marwilc.mistrueques.view.MainActivity"
-    android:id="@+id/drawerNavigator"
+    android:id="@+id/drawerLayout"
     >
 
     <!--coordinator layout-->
@@ -23,6 +23,7 @@
             >
 
             <!--include the toolbar-->
+
             <include
                 android:id="@+id/myActionBar"
                 layout="@layout/actionbar"
@@ -34,22 +35,35 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Main Layout"
+            android:text="te Amo jeilem"
             android:id="@+id/textViewMainLayout"
             android:layout_gravity="center_vertical"
             android:textAlignment="center"
             android:textSize="24sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            />
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="te Amo jeilem"
+            android:layout_gravity="bottom"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
             />
 
     </android.support.design.widget.CoordinatorLayout>
 
     <!--navigation view for menu options-->
     <android.support.design.widget.NavigationView
+
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
         />
-
 </android.support.v4.widget.DrawerLayout>
