@@ -7,16 +7,19 @@
     <!--Item home-->
     <item android:id="@+id/nav_home"
         android:title="@string/home"
+        android:icon="@drawable/ic_menu_home"
         />
 
     <!--Item Inbox-->
     <item android:id="@+id/nav_inbox"
         android:title="@string/inbox"
+        android:icon="@drawable/ic_menu_inbox"
         />
 
     <!--Item Notifications-->
     <item android:id="@+id/nav_notifications"
         android:title="@string/notifications"
+        android:icon="@drawable/ic_menu_notifications"
         />
 
     <!--Group1 estatus-->
@@ -25,6 +28,7 @@
         <!--Item status-->
         <item android:id="@+id/nav_status"
             android:title="@string/status"
+            android:icon="@drawable/ic_menu_status"
             />
 
     </group>
@@ -32,53 +36,30 @@
     <!--Item sales-->
     <item android:id="@+id/nav_sales"
         android:title="@string/sales"
-        />
-
-    <!--Item earnings-->
-    <item android:id="@+id/nav_earnings"
-        android:title="@string/earnings"
-        />
-
-    <!--Item services-->
-    <item android:id="@+id/nav_services"
-        android:title="@string/services"
-        />
-
-    <!--Item buyers requests-->
-    <item android:id="@+id/nav_buyers_requests"
-        android:title="@string/buyersRequests"
-        />
-
-    <!--Item promote services-->
-    <item android:id="@+id/nav_promote_services"
-        android:title="@string/promoteServices"
+        android:icon="@drawable/ic_menu_sales"
         />
 
     <!--Grupo 2 settings-->
     <group android:id="@+id/group2">
-
         <!--Item settings-->
         <item android:id="@+id/nav_settings"
             android:title="@string/settings"
+            android:icon="@drawable/ic_menu_settings"
             />
 
         <!--Item Profile-->
         <item android:id="@+id/nav_profile"
             android:title="@string/profile"
+            android:icon="@drawable/ic_menu_profile"
             />
 
         <!--Item support-->
         <item android:id="@+id/nav_support"
             android:title="@string/support"
-
+            android:icon="@drawable/ic_menu_support"
             />
 
     </group>
-
-    <!--Item view as buyer-->
-    <item android:id="@+id/nav_view_as_buyer"
-        android:title="@string/viewAsBuyer"
-        />
 
     <!--Item version-->
     <item android:id="@+id/nav_version"

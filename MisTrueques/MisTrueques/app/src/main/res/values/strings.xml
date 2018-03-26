@@ -18,4 +18,6 @@
     <string name="Menu">Menu Options</string>
     <string name="open">Abrir</string>
     <string name="close">Cerrar</string>
+    <string name="name">John Doe</string>
+    <string name="mail">johndoe@gmail.com</string>
 </resources>

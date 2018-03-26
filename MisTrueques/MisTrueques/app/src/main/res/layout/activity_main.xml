@@ -7,62 +7,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.marwilc.mistrueques.view.MainActivity"
-    android:id="@+id/drawerLayout"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     >
 
-    <!--coordinator layout-->
-    <android.support.design.widget.CoordinatorLayout
+    <!--include the toolbar-->
+
+    <include
+        android:id="@+id/my_action_bar"
+        layout="@layout/actionbar"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!--AppBar layout-->
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            >
-
-            <!--include the toolbar-->
-
-            <include
-                android:id="@+id/myActionBar"
-                layout="@layout/actionbar"
-                />
-
-        </android.support.design.widget.AppBarLayout>
-
-        <!--textView main layout-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="te Amo jeilem"
-            android:id="@+id/textViewMainLayout"
-            android:layout_gravity="center_vertical"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:fontFamily="@font/roboto"
-            android:textStyle="bold"
-            />
-
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="te Amo jeilem"
-            android:layout_gravity="bottom"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            />
-
-    </android.support.design.widget.CoordinatorLayout>
+        />
 
     <!--navigation view for menu options-->
     <android.support.design.widget.NavigationView
 
-        android:id="@+id/navigationView"
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
         />
