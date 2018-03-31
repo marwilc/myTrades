@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MisTrueques.iml" filepath="$PROJECT_DIR$/MisTrueques.iml" />
-      <module fileurl="file://$USER_HOME$/Desktop/proyecto_mis_trueques/repomt/MisTrueques/MisTrueques/MisTrueques.iml" filepath="$USER_HOME$/Desktop/proyecto_mis_trueques/repomt/MisTrueques/MisTrueques/MisTrueques.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$USER_HOME$/Desktop/proyecto_mis_trueques/repomt/MisTrueques/MisTrueques/app/app.iml" filepath="$USER_HOME$/Desktop/proyecto_mis_trueques/repomt/MisTrueques/MisTrueques/app/app.iml" />
     </modules>
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.marwilc.mistrueques.view;
 
+import android.support.v4.app.FragmentManager;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.marwilc.mistrueques.R;
+import com.marwilc.mistrueques.view.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -83,6 +85,9 @@ public class MainActivity extends AppCompatActivity
         switch (id){
             case R.id.nav_home:
                 Snackbar.make(this.getCurrentFocus(),R.string.home, Snackbar.LENGTH_LONG).show();
+                HomeFragment homeFragment = new HomeFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.relative_layout, homeFragment).commit();
                 break;
 
             case R.id.nav_inbox:
