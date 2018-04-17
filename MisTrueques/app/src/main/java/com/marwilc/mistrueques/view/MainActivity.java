@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
+import com.marwilc.mistrueques.view.fragments.InboxFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -30,12 +31,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* Colocacion de la fuente roboto a un textView
-
-        textView = (TextView) findViewById(R.id.textViewMainLayout);
-        Typeface roboto = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Medium.ttf");
-        textView.setTypeface(roboto);
-        */
         /* Toolbar custom
          */
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -78,47 +73,70 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Este metodo se encarga de manejar los fragments a traves del panel lateral
+     * @param item
+     * @return
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        FragmentManager manager = getSupportFragmentManager();;
 
         switch (id){
+
             case R.id.nav_home:
                 Snackbar.make(this.getCurrentFocus(),R.string.home, Snackbar.LENGTH_LONG).show();
+                /*
+                 * Transicion de un fragment a otro
+                 */
                 HomeFragment homeFragment = new HomeFragment();
-                FragmentManager manager = getSupportFragmentManager();
-                manager.beginTransaction().replace(R.id.relative_layout, homeFragment).commit();
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, homeFragment, homeFragment.getTag())
+                        .commit();
                 break;
 
             case R.id.nav_inbox:
+                //TODO: crear el fragment para los mensajes nuevos
                 Snackbar.make(this.getCurrentFocus(),R.string.inbox, Snackbar.LENGTH_LONG).show();
+                InboxFragment inboxFragment = InboxFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, inboxFragment, inboxFragment.getTag())
+                        .commit();
                 break;
 
             case R.id.nav_notifications:
+                //TODO: crear el fragment para las notificaciones
                 Snackbar.make(this.getCurrentFocus(),R.string.notifications, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_status:
+                //TODO: crear el swiche que modificara el estado del usuario (online, offline)
                 Snackbar.make(this.getCurrentFocus(),R.string.status, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_sales:
+                //TODO: crear el fragment para la gestion de los intercambios
                 Snackbar.make(this.getCurrentFocus(),R.string.sales, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_settings:
+                //TODO: crear el fragment para a configuracion de la aplicacion
                 Snackbar.make(this.getCurrentFocus(),R.string.settings, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_profile:
+                //TODO: crear el fragment para el perfil del usuario
                 Snackbar.make(this.getCurrentFocus(),R.string.profile, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_support:
+                //TODO: crear el fragment para el soporte de usuario
                 Snackbar.make(this.getCurrentFocus(),R.string.support, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_version:
+                //TODO: crear el fragment para dar informacion acerca de la aplicacion
                 Snackbar.make(this.getCurrentFocus(),R.string.version, Snackbar.LENGTH_LONG).show();
                 break;
 

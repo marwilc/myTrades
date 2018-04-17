@@ -30,6 +30,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <!--Se incluye el fragment home como el predeterminado-->
     <include layout="@layout/content_main"
         />
 

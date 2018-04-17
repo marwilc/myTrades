@@ -17,4 +17,10 @@
     <string name="viewAsBuyer">View as buyer</string>
     <string name="open"> Open</string>
     <string name="close"> Close</string>
+    <string name="statistics">My Stats</string>
+    <string name="trader_level">Trader level</string>
+    <string name="next_evaluation">Next Evaluation</string>
+    <string name="response_time">Response Time</string>
+    <string name="dummy_level">No Level</string>
+    <string name="dummy_date">May 14, 2018</string>
 </resources>
