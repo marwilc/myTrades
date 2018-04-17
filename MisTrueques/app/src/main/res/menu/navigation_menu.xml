@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Menu del sideMenu-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!--Item home-->
+    <item android:id="@+id/nav_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_menu_home"
+        />
+
+    <!--Item Inbox-->
+    <item android:id="@+id/nav_inbox"
+        android:title="@string/inbox"
+        android:icon="@drawable/ic_menu_inbox"
+        />
+
+    <!--Item Notifications-->
+    <item android:id="@+id/nav_notifications"
+        android:title="@string/notifications"
+        android:icon="@drawable/ic_menu_notifications"
+        />
+
+    <!--Group1 estatus-->
+    <group android:id="@+id/group1">
+
+        <!--Item status-->
+        <item android:id="@+id/nav_status"
+            android:title="@string/status"
+            android:icon="@drawable/ic_menu_status"
+            />
+
+    </group>
+
+    <!--Item sales-->
+    <item android:id="@+id/nav_sales"
+        android:title="@string/sales"
+        android:icon="@drawable/ic_menu_sales"
+        />
+
+    <!--Grupo 2 settings-->
+    <group android:id="@+id/group2">
+        <!--Item settings-->
+        <item android:id="@+id/nav_settings"
+            android:title="@string/settings"
+            android:icon="@drawable/ic_menu_settings"
+            />
+
+        <!--Item Profile-->
+        <item android:id="@+id/nav_profile"
+            android:title="@string/profile"
+            android:icon="@drawable/ic_menu_profile"
+            />
+
+        <!--Item support-->
+        <item android:id="@+id/nav_support"
+            android:title="@string/support"
+            android:icon="@drawable/ic_menu_support"
+            />
+
+    </group>
+
+    <!--Item version-->
+    <item android:id="@+id/nav_version"
+        android:title="@string/version"
+        />
+</menu>

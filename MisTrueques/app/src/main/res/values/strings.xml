@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mis Trueques</string>
+    <string name="account">Mi Cuenta</string>
+    <string name="home">Inicio</string>
+    <string name="inbox">Buzon</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="status">Estado en Linea</string>
+    <string name="sales">Gestion de ventas</string>
+    <string name="earnings">Ganancias</string>
+    <string name="services">Mis servicios</string>
+    <string name="buyersRequests">Solicitudes de Compradores</string>
+    <string name="promoteServices">Promocionar sus servicios</string>
+    <string name="settings">Configuraciones</string>
+    <string name="profile">Perfil</string>
+    <string name="support">Soporte</string>
+    <string name="viewAsBuyer">Ver como un comprador</string>
+    <string name="version">version a1.0.2</string>
+    <string name="Menu">Menu Options</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
+    <string name="statistics">Mis estadisticas</string>
+    <string name="name">Marwil Campos</string>
+    <string name="mail">marwilcampos@gmail.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trader_level">Nivel de trader</string>
+    <string name="next_evaluation">Siguiente Evaluacion</string>
+    <string name="response_time">Tiempo de Respuesta</string>
+    <string name="dummy_level">No Level</string>
+    <string name="dummy_date">May 14, 2018</string>
+    <string name="dummy_response">1 hour</string>
+</resources>
