@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--coordinator layout-->
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    tools:context="com.marwilc.mistrueques.view.MainActivity"
+    tools:context=".view.MainActivity"
     >
 
     <!--AppBar layout-->
@@ -26,15 +26,19 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            />
+            >
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+
 
     </android.support.design.widget.AppBarLayout>
 
-    <!--Se incluye el fragment home como el predeterminado-->
-    <include layout="@layout/content_main"
-        />
 
-    <android.support.design.widget.FloatingActionButton
+
+  <!--  <android.support.design.widget.FloatingActionButton
         android:id="@+id/fButtonMain"
         android:src="@drawable/ic_menu_inbox"
         android:layout_width="wrap_content"
@@ -43,4 +47,6 @@
         android:layout_margin="20dp"
         android:elevation="6dp"
         />
-</android.support.design.widget.CoordinatorLayout>
+   -->
+
+</LinearLayout>

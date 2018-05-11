@@ -16,7 +16,10 @@
 
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".view.Splash">
+        <activity android:name=".view.Splash"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +29,8 @@
         <activity
             android:name=".view.MainActivity"
             android:parentActivityName=".view.Splash"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             >
 
             <meta-data

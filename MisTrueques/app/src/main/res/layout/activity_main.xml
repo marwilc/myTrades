@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.marwilc.mistrueques.view.MainActivity"
+    tools:context=".view.MainActivity"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
@@ -14,18 +14,33 @@
 
     <!--include the toolbar-->
 
-    <include
-        android:id="@+id/my_action_bar"
-        layout="@layout/actionbar"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/my_action_bar"
+            layout="@layout/actionbar"
+            />
+
+        <!--Se incluye el fragment home como el predeterminado-->
+
+        <include layout="@layout/content_main"
+            />
+
+    </LinearLayout>
+
+
+
 
     <!--navigation view for menu options-->
     <android.support.design.widget.NavigationView
 
         android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"

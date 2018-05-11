@@ -1,7 +1,6 @@
 package com.marwilc.mistrueques.view;
 
 import android.support.v4.app.FragmentManager;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -13,7 +12,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
@@ -25,6 +23,8 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout mDrawerLayout;     // definicion de un drawer layout para hacer uso en side menu
     private ActionBarDrawerToggle mToggle;  // se define un drawer toggle para poner un icono de menu en la barra de// acccion
     private TextView textView;              // Se crearan textview para la prueba del Roboto font
+    private FragmentManager manager;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity
 
         /* Toolbar custom
          */
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.user_name);
+        //toolbar.setLogo(R.drawable.profilefinal);
 
         if (toolbar != null)
             setSupportActionBar(toolbar);
@@ -56,6 +58,14 @@ public class MainActivity extends AppCompatActivity
          */
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /* Setea la primera vista del home
+         */
+        manager = getSupportFragmentManager();
+        HomeFragment homeFragment = new HomeFragment();
+        manager.beginTransaction()
+                .replace(R.id.relative_layout_for_fragment, homeFragment, homeFragment.getTag())
+                .commit();
 
     }
 
@@ -81,7 +91,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        FragmentManager manager = getSupportFragmentManager();;
+
 
         switch (id){
 
@@ -94,6 +104,7 @@ public class MainActivity extends AppCompatActivity
                 manager.beginTransaction()
                         .replace(R.id.relative_layout_for_fragment, homeFragment, homeFragment.getTag())
                         .commit();
+                toolbar.setTitle(R.string.user_name);
                 break;
 
             case R.id.nav_inbox:
@@ -103,6 +114,7 @@ public class MainActivity extends AppCompatActivity
                 manager.beginTransaction()
                         .replace(R.id.relative_layout_for_fragment, inboxFragment, inboxFragment.getTag())
                         .commit();
+                toolbar.setTitle(R.string.inbox);
                 break;
 
             case R.id.nav_notifications:
