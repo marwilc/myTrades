@@ -8,4 +8,9 @@
     <color name="black">#454545</color>
     <color name="gray">#a6a6a6</color>
     <color name="colorPurple">#6D6DFB</color>
+    <color name="colorYellow">#fbe66d</color>
+    <color name="colorRed">#fb6d6f</color>
+    <color name="colorBlue">#0272fa</color>
+    <color name="colorGreen">#6dfb7b</color>
+
 </resources>

@@ -50,6 +50,25 @@
     <string name="dummy_cancelled_tradings">0</string>
     <string name="todos">To-Dos</string>
     <string name="lorem_ipsum">Lorem Ipsum</string>
-    <string name="lorem_ipsum_long">lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id egestas quam. Vestibulum sed odio tincidunt......</string>
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id egestas quam. Vestibulum sed odio tincidunt......</string>
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit......</string>
     <string name="n_todos">1</string>
+    <string name="mc">MC</string>
+
+    <string name="user_name">marwilc</string>
+    <string name="dummy_date_inbox">1 months ago</string>
+
+    <string-array name="user_names">
+        <item>MarwilC</item>
+        <item>NadiamCorp</item>
+        <item>JuliamCox</item>
+        <item>JeanPierre</item>
+        <item>IrinaRan</item>
+        <item>XenialXes</item>
+        <item>BeaverBar</item>
+        <item>JunoJummy</item>
+        <item>SanSen</item>
+        <item>LexLuttor</item>
+        <item>ThorMarx</item>
+    </string-array>
 </resources>

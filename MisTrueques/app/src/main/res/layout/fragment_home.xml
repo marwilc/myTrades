@@ -136,13 +136,14 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp">
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:columnCount="4"
+                android:rowCount="2"
+                >
 
                 <!--TODO: implementar las barras de estats-->
 
@@ -160,8 +161,6 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_toEndOf="@id/pb_response_rate"
-                    android:layout_toRightOf="@id/pb_response_rate"
                     android:max="500"
                     android:progress="0"
                     android:progressDrawable="@drawable/pogress_bar_style" />
@@ -171,8 +170,6 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_toEndOf="@id/pb_trad_complete"
-                    android:layout_toRightOf="@id/pb_trad_complete"
                     android:max="500"
                     android:progress="0"
                     android:progressDrawable="@drawable/pogress_bar_style" />
@@ -182,26 +179,9 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_toEndOf="@id/pb_ontime_delivery"
-                    android:layout_toRightOf="@id/pb_ontime_delivery"
                     android:max="500"
                     android:progress="0"
                     android:progressDrawable="@drawable/pogress_bar_style" />
-
-
-            </RelativeLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:paddingBottom="8dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp">
-
-                <!--TODO: los titulos de stats-->
 
                 <TextView
                     style="@style/MyTextViewStyleH2.wrap.center"
@@ -227,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/positive_rating" />
 
-            </LinearLayout>
+            </GridLayout>
 
         </LinearLayout>
 

@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_inbox:
-                //TODO: crear el fragment para los mensajes nuevos
+
                 Snackbar.make(this.getCurrentFocus(),R.string.inbox, Snackbar.LENGTH_LONG).show();
                 InboxFragment inboxFragment = InboxFragment.newInstance("unParametro", "OtroParametro");
                 manager.beginTransaction()

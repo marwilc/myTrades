@@ -37,7 +37,9 @@
             android:layout_alignTop="@id/content_todo"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
-            android:text="@string/n_todos" />
+            android:text="@string/n_todos"
+            android:layout_toEndOf="@id/content_todo"
+            android:layout_marginStart="15dp" />
 
 
 
