@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
 import com.marwilc.mistrueques.view.fragments.InboxFragment;
+import com.marwilc.mistrueques.view.fragments.NotificationsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -118,8 +119,13 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_notifications:
-                //TODO: crear el fragment para las notificaciones
+
                 Snackbar.make(this.getCurrentFocus(),R.string.notifications, Snackbar.LENGTH_LONG).show();
+                NotificationsFragment notificationsFragment = NotificationsFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, notificationsFragment, notificationsFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.notifications);
                 break;
 
             case R.id.nav_status:

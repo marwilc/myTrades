@@ -1,7 +1,11 @@
 package com.marwilc.mistrueques.view.fragments;
 
+import android.app.Notification;
+
 import com.marwilc.mistrueques.adapters.InboxMenssageAdapter;
+import com.marwilc.mistrueques.adapters.NotificationAdapter;
 import com.marwilc.mistrueques.model.InboxMenssage;
+import com.marwilc.mistrueques.model.Notifications;
 
 import java.util.ArrayList;
 
@@ -25,9 +29,22 @@ public interface IRecyclerViewFragment {
     public void initAdapterForRVInboxFragment(InboxMenssageAdapter inboxMenssageAdapter);
 
     /**
+     * Este metodo inicializa el adaptador para el rv del imbox fragment
+     * @param notificationAdapter
+     */
+    public void initAdapterForRVNotificationFragment(NotificationAdapter notificationAdapter);
+
+    /**
      * Este metodo crea el adaptador para los inbox Menssages
      * @param menssages
      * @return
      */
     public InboxMenssageAdapter createMenssageAdapter(ArrayList<InboxMenssage> menssages);
+
+    /**
+     * Este metodo crea el adaptador para los notifications Menssages
+     * @param notifications
+     * @return
+     */
+    public NotificationAdapter createNotificationAdapter(ArrayList<Notifications> notifications);
 }
