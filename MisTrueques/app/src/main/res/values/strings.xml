@@ -57,6 +57,13 @@
 
     <string name="user_name">marwilc</string>
     <string name="dummy_date_inbox">1 months ago</string>
+    <string name="online">online</string>
+    <string name="user_info">User Information</string>
+    <string name="from">From</string>
+    <string name="country">Venezuela</string>
+    <string name="speaks">Speaks</string>
+    <string name="english">English</string>
+    <string name="description">Description</string>
 
     <string-array name="user_names">
         <item>MarwilC</item>

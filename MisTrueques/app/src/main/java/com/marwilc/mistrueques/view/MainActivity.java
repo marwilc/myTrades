@@ -1,5 +1,8 @@
 package com.marwilc.mistrueques.view;
 
+import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -18,6 +21,8 @@ import com.marwilc.mistrueques.view.fragments.HomeFragment;
 import com.marwilc.mistrueques.view.fragments.InboxFragment;
 import com.marwilc.mistrueques.view.fragments.NotificationsFragment;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -27,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     private FragmentManager manager;
     private Toolbar toolbar;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity
 
         /* Se activa el icono de menu en la barra de accion
          */
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         /*coloca en modo escucha el navigation view
          */
@@ -129,7 +135,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_status:
-                //TODO: crear el swiche que modificara el estado del usuario (online, offline)
+                //TODO: hacer la funcionalidad del switch on/offline
                 Snackbar.make(this.getCurrentFocus(),R.string.status, Snackbar.LENGTH_LONG).show();
                 break;
 
@@ -144,8 +150,10 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_profile:
-                //TODO: crear el fragment para el perfil del usuario
+                //TODO: crear el activity para el perfil del usuario
                 Snackbar.make(this.getCurrentFocus(),R.string.profile, Snackbar.LENGTH_LONG).show();
+                final Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_support:

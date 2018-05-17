@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.marwilc.mistrueques">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,13 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts" />
-
-        <activity android:name=".view.Splash"
+        <activity
+            android:name=".view.Splash"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,15 +30,24 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:parentActivityName=".view.Splash"
             android:configChanges="orientation"
+            android:parentActivityName=".view.Splash"
             android:screenOrientation="portrait"
-            >
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.Splash" />
+        </activity>
+        <activity
+            android:name=".view.ProfileActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait"
+            tools:targetApi="jelly_bean">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.Splash"
-                />
+                android:value=".view.MainActivity" />
 
         </activity>
     </application>

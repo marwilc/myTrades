@@ -51,6 +51,18 @@
 
     </style>
 
+    <style name="MyTextViewStyleGreen">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+    </style>
+
+    <style name="MyTextViewStyleGreenLight">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGreenLight</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+    </style>
+
     <style name="MyTextViewStyleH2.wrap.center" parent="MyTextViewStyleH2">
         <item name="android:gravity">center_horizontal</item>
         <item name="android:scrollHorizontally">false</item>
