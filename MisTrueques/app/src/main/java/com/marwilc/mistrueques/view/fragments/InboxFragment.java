@@ -90,7 +90,6 @@ public class InboxFragment extends Fragment implements IRecyclerViewFragment{
 
         // construye un RecyclerView y lo configura con el id del xml
         rvMenssages = (RecyclerView) v.findViewById(R.id.rv_inbox);
-
         // se construye un presentador
         presenter = new RecyclerViewFragmentInboxPresenter(this, getContext());
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -102,6 +101,7 @@ public class InboxFragment extends Fragment implements IRecyclerViewFragment{
 
         return v;
     }
+
 
     /**
      * Este metodo refresca la vista del inbox

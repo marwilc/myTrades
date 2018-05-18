@@ -105,6 +105,8 @@ public class InboxMenssageAdapter
         GradientDrawable bgShape = (GradientDrawable)holder.tvAvatar.getBackground();
         bgShape.setColor(randomColor());
 
+
+
     }
 
     private int randomColor() {

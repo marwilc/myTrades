@@ -20,6 +20,7 @@ import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
 import com.marwilc.mistrueques.view.fragments.InboxFragment;
 import com.marwilc.mistrueques.view.fragments.NotificationsFragment;
+import com.marwilc.mistrueques.view.fragments.SupportFragment;
 
 import java.util.Objects;
 
@@ -159,6 +160,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_support:
                 //TODO: crear el fragment para el soporte de usuario
                 Snackbar.make(this.getCurrentFocus(),R.string.support, Snackbar.LENGTH_LONG).show();
+                SupportFragment supportFragment = SupportFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, supportFragment, supportFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.support);
                 break;
 
             case R.id.nav_version:

@@ -67,4 +67,10 @@
         <item>LexLuttor</item>
         <item>ThorMarx</item>
     </string-array>
+    <string-array name="items_support">
+        <item>Help</item>
+        <item>Leave feedback</item>
+        <item>Forum</item>
+        <item>Blog</item>
+    </string-array>
 </resources>
