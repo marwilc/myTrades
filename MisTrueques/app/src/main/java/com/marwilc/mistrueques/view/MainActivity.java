@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
+        final Intent intent;
 
         switch (id){
 
@@ -148,12 +148,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_settings:
                 //TODO: crear el fragment para a configuracion de la aplicacion
                 Snackbar.make(this.getCurrentFocus(),R.string.settings, Snackbar.LENGTH_LONG).show();
+                intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_profile:
                 //TODO: crear el activity para el perfil del usuario
                 Snackbar.make(this.getCurrentFocus(),R.string.profile, Snackbar.LENGTH_LONG).show();
-                final Intent intent = new Intent(this, ProfileActivity.class);
+                intent = new Intent(this, ProfileActivity.class);
                 startActivity(intent);
                 break;
 

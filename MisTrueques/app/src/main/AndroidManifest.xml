@@ -44,10 +44,21 @@
             android:parentActivityName=".view.MainActivity"
             android:screenOrientation="portrait"
             tools:targetApi="jelly_bean">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.SettingsActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait"
+            tools:targetApi="jelly_bean"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.MainActivity"
+                />
 
         </activity>
     </application>

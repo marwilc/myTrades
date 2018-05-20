@@ -82,22 +82,6 @@ public class SupportFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_support, container, false);
 
-      /*  lvItemsSupport = (ListView) v.findViewById(R.id.lv_support);
-
-        Resources res = getResources();
-        String[] itemsSupport = res.getStringArray(R.array.items_support);
-
-        ArrayAdapter<String> adapter =
-                new ArrayAdapter<>(getActivity().getApplicationContext(),R.layout.item_support,itemsSupport);
-
-        lvItemsSupport.setAdapter(adapter);
-        lvItemsSupport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(view,String.valueOf(position),Snackbar.LENGTH_SHORT).show();
-            }
-        });
-*/
 
         return v;
     }

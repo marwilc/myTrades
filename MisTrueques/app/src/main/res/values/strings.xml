@@ -84,4 +84,13 @@
         <item>Forum</item>
         <item>Blog</item>
     </string-array>
+
+    <string-array name="items_settings">
+        <item>Notifications</item>
+        <item>Notifications sound</item>
+        <item>Terms of service</item>
+        <item>Privacy policy</item>
+        <item>Out of Office mode</item>
+        <item>Logout</item>
+    </string-array>
 </resources>
