@@ -65,7 +65,6 @@ public class RecyclerViewFragmentNotificationPresenter implements IRecyclerViewF
         //Inicia el adaptadador para el rv
         myIRecyclerViewFragment.initAdapterForRVNotificationFragment(myIRecyclerViewFragment.createNotificationAdapter(this.myListNotifications));
         myIRecyclerViewFragment.generateLinearLayoutVertical();
-
     }
 
     public IRecyclerViewFragment getMyIRecyclerViewFragment() {

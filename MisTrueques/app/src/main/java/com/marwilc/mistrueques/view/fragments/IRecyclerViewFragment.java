@@ -4,8 +4,10 @@ import android.app.Notification;
 
 import com.marwilc.mistrueques.adapters.InboxMenssageAdapter;
 import com.marwilc.mistrueques.adapters.NotificationAdapter;
+import com.marwilc.mistrueques.adapters.TradeAdapter;
 import com.marwilc.mistrueques.model.InboxMenssage;
 import com.marwilc.mistrueques.model.Notifications;
+import com.marwilc.mistrueques.model.Trade;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,12 @@ public interface IRecyclerViewFragment {
     public void initAdapterForRVNotificationFragment(NotificationAdapter notificationAdapter);
 
     /**
+     *  metodo inicializa el adaptador para el rv del trades fragment
+     * @param tradeAdapter
+     */
+    public void initAdapterForRVTradesFragment(TradeAdapter tradeAdapter);
+
+    /**
      * Este metodo crea el adaptador para los inbox Menssages
      * @param menssages
      * @return
@@ -47,4 +55,12 @@ public interface IRecyclerViewFragment {
      * @return
      */
     public NotificationAdapter createNotificationAdapter(ArrayList<Notifications> notifications);
+
+
+    /**
+     * Este metodo crea el adaptador para los trades
+     * @param trades
+     * @return
+     */
+    public TradeAdapter createTradeAdapter(ArrayList<Trade> trades);
 }

@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
 import com.marwilc.mistrueques.view.fragments.InboxFragment;
+import com.marwilc.mistrueques.view.fragments.MyTradesFragment;
 import com.marwilc.mistrueques.view.fragments.NotificationsFragment;
 import com.marwilc.mistrueques.view.fragments.SupportFragment;
 
@@ -142,25 +143,30 @@ public class MainActivity extends AppCompatActivity
 
             case R.id.nav_sales:
                 //TODO: crear el fragment para la gestion de los intercambios
-                Snackbar.make(this.getCurrentFocus(),R.string.sales, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(this.getCurrentFocus(),R.string.app_name, Snackbar.LENGTH_LONG).show();
+                MyTradesFragment myTradesFragment = MyTradesFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, myTradesFragment, myTradesFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.app_name);
                 break;
 
             case R.id.nav_settings:
-                //TODO: crear el fragment para a configuracion de la aplicacion
+                //Vista del activity de la configuracion de la aplicacion
                 Snackbar.make(this.getCurrentFocus(),R.string.settings, Snackbar.LENGTH_LONG).show();
                 intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.nav_profile:
-                //TODO: crear el activity para el perfil del usuario
+                //Vista del activity del perfil
                 Snackbar.make(this.getCurrentFocus(),R.string.profile, Snackbar.LENGTH_LONG).show();
                 intent = new Intent(this, ProfileActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.nav_support:
-                //TODO: crear el fragment para el soporte de usuario
+                //Vista del fragment support
                 Snackbar.make(this.getCurrentFocus(),R.string.support, Snackbar.LENGTH_LONG).show();
                 SupportFragment supportFragment = SupportFragment.newInstance("unParametro", "OtroParametro");
                 manager.beginTransaction()

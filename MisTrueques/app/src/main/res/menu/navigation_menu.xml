@@ -48,7 +48,7 @@
 
     <!--Item sales-->
     <item android:id="@+id/nav_sales"
-        android:title="@string/sales"
+        android:title="@string/app_name"
         android:icon="@drawable/ic_menu_sales"
         />
 
