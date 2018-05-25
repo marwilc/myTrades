@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="6dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/civ_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profilefinal"
+        android:text="@string/mc"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="1"
+        app:civ_shadow_color="#8BC34A"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/circular_textview"
+        style="@style/MyTextViewStyleBlack"
+        android:text="@string/mc"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_username_inbox"
+        android:layout_marginStart="6dp"
+        style="@style/MyTextViewStyleBlack"
+        android:text="@string/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/civ_avatar"
+        android:layout_toRightOf="@id/civ_avatar"
+        android:layout_marginLeft="6dp" />
+
+    <TextView
+        android:id="@+id/tv_date_inbox"
+        style="@style/MyTextViewStyleH2Gray"
+        android:text="@string/dummy_date_inbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_username_inbox"
+        android:layout_toRightOf="@id/tv_username_inbox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RtlHardcoded"
+        android:gravity="end" />
+
+    <TextView
+        android:id="@+id/tv_message_inbox"
+        style="@style/MyTextViewStyleH2Gray"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:text="@string/lorem_ipsum_short"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/civ_avatar"
+        android:layout_toRightOf="@id/civ_avatar"
+        android:layout_below="@id/tv_username_inbox"
+        android:layout_marginLeft="6dp" />
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/separator_shape"
+        />
+
+</RelativeLayout>

@@ -1,28 +1,275 @@
-<FrameLayout
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/f_home"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/cardview_shadow_start_color"
-    android:gravity="bottom"
-    android:orientation="vertical"
-    tools:context="com.marwilc.mistrueques.view.fragments.HomeFragment">
+    android:background="@color/whiteGray"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srl_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/f_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".view.fragments.HomeFragment">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_home"
+
+        <!--
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_home"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </android.support.v4.widget.SwipeRefreshLayout>
+        -->
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@drawable/side_nav_bar"
+            android:orientation="vertical"
+            android:padding="6dp">
 
-        </android.support.v7.widget.RecyclerView>
+            <!-- TODO: Diseñar el header del home -->
 
-    </android.support.v4.widget.SwipeRefreshLayout>
+            <!--Texview del header-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_stats"
+                    style="@style/MyTextViewStyleH1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/statistics" />
+
+                <ImageButton
+                    android:id="@+id/btn_help"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ic_help_outline"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    style="@style/MyTextViewStyleH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/trader_level" />
+
+                <!--TODO: colocar el Texview de nivel de trader-->
+
+                <TextView
+                    android:id="@+id/tv_level_trader"
+                    style="@style/MyTextViewStyleH2Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/dummy_level" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    style="@style/MyTextViewStyleH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_evaluation" />
+
+                <!--TODO: colocar el Texview de nivel de trader-->
+
+                <TextView
+                    android:id="@+id/tv_next_evaluation"
+                    style="@style/MyTextViewStyleH2Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/dummy_date" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    style="@style/MyTextViewStyleH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_time" />
+
+                <!--TODO: colocar el Texview de nivel de trader-->
+
+                <TextView
+                    android:id="@+id/tv_response_time"
+                    style="@style/MyTextViewStyleH2Purple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/dummy_response" />
+
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp"
+                android:columnCount="4"
+                android:rowCount="2"
+                >
+
+                <!--TODO: implementar las barras de estats-->
+
+                <ProgressBar
+                    android:id="@+id/pb_response_rate"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="500"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/pogress_bar_style" />
+
+                <ProgressBar
+                    android:id="@+id/pb_trad_complete"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="500"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/pogress_bar_style" />
+
+                <ProgressBar
+                    android:id="@+id/pb_ontime_delivery"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="500"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/pogress_bar_style" />
+
+                <ProgressBar
+                    android:id="@+id/pb_positive_rating"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:max="500"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/pogress_bar_style" />
+
+                <TextView
+                    style="@style/MyTextViewStyleH2.wrap.center"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_rate" />
+
+                <TextView
+                    style="@style/MyTextViewStyleH2.wrap.center"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tradding_complete" />
+
+                <TextView
+                    style="@style/MyTextViewStyleH2.wrap.center"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_time_delivery" />
+
+                <TextView
+                    style="@style/MyTextViewStyleH2.wrap.center"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/positive_rating" />
+
+            </GridLayout>
+
+        </LinearLayout>
 
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tradings"
+                    />
+
+                <TextView
+                    style="@style/MyTextViewStyleH2Purple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_details"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/carview_tradings"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todos"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                />
+
+            <include layout="@layout/carview_todos"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+

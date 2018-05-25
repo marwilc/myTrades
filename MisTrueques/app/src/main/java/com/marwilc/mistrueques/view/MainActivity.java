@@ -1,7 +1,9 @@
 package com.marwilc.mistrueques.view;
 
+import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -13,11 +15,15 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.marwilc.mistrueques.R;
 import com.marwilc.mistrueques.view.fragments.HomeFragment;
 import com.marwilc.mistrueques.view.fragments.InboxFragment;
+import com.marwilc.mistrueques.view.fragments.MyTradesFragment;
+import com.marwilc.mistrueques.view.fragments.NotificationsFragment;
+import com.marwilc.mistrueques.view.fragments.SupportFragment;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -25,7 +31,10 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout mDrawerLayout;     // definicion de un drawer layout para hacer uso en side menu
     private ActionBarDrawerToggle mToggle;  // se define un drawer toggle para poner un icono de menu en la barra de// acccion
     private TextView textView;              // Se crearan textview para la prueba del Roboto font
+    private FragmentManager manager;
+    private Toolbar toolbar;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +42,9 @@ public class MainActivity extends AppCompatActivity
 
         /* Toolbar custom
          */
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.user_name);
+        //toolbar.setLogo(R.drawable.profilefinal);
 
         if (toolbar != null)
             setSupportActionBar(toolbar);
@@ -50,12 +61,20 @@ public class MainActivity extends AppCompatActivity
 
         /* Se activa el icono de menu en la barra de accion
          */
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         /*coloca en modo escucha el navigation view
          */
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /* Setea la primera vista del home
+         */
+        manager = getSupportFragmentManager();
+        HomeFragment homeFragment = new HomeFragment();
+        manager.beginTransaction()
+                .replace(R.id.relative_layout_for_fragment, homeFragment, homeFragment.getTag())
+                .commit();
 
     }
 
@@ -81,7 +100,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        FragmentManager manager = getSupportFragmentManager();;
+        final Intent intent;
 
         switch (id){
 
@@ -94,45 +113,66 @@ public class MainActivity extends AppCompatActivity
                 manager.beginTransaction()
                         .replace(R.id.relative_layout_for_fragment, homeFragment, homeFragment.getTag())
                         .commit();
+                toolbar.setTitle(R.string.user_name);
                 break;
 
             case R.id.nav_inbox:
-                //TODO: crear el fragment para los mensajes nuevos
+
                 Snackbar.make(this.getCurrentFocus(),R.string.inbox, Snackbar.LENGTH_LONG).show();
                 InboxFragment inboxFragment = InboxFragment.newInstance("unParametro", "OtroParametro");
                 manager.beginTransaction()
                         .replace(R.id.relative_layout_for_fragment, inboxFragment, inboxFragment.getTag())
                         .commit();
+                toolbar.setTitle(R.string.inbox);
                 break;
 
             case R.id.nav_notifications:
-                //TODO: crear el fragment para las notificaciones
+
                 Snackbar.make(this.getCurrentFocus(),R.string.notifications, Snackbar.LENGTH_LONG).show();
+                NotificationsFragment notificationsFragment = NotificationsFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, notificationsFragment, notificationsFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.notifications);
                 break;
 
             case R.id.nav_status:
-                //TODO: crear el swiche que modificara el estado del usuario (online, offline)
+                //TODO: hacer la funcionalidad del switch on/offline
                 Snackbar.make(this.getCurrentFocus(),R.string.status, Snackbar.LENGTH_LONG).show();
                 break;
 
             case R.id.nav_sales:
                 //TODO: crear el fragment para la gestion de los intercambios
-                Snackbar.make(this.getCurrentFocus(),R.string.sales, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(this.getCurrentFocus(),R.string.app_name, Snackbar.LENGTH_LONG).show();
+                MyTradesFragment myTradesFragment = MyTradesFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, myTradesFragment, myTradesFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.app_name);
                 break;
 
             case R.id.nav_settings:
-                //TODO: crear el fragment para a configuracion de la aplicacion
+                //Vista del activity de la configuracion de la aplicacion
                 Snackbar.make(this.getCurrentFocus(),R.string.settings, Snackbar.LENGTH_LONG).show();
+                intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_profile:
-                //TODO: crear el fragment para el perfil del usuario
+                //Vista del activity del perfil
                 Snackbar.make(this.getCurrentFocus(),R.string.profile, Snackbar.LENGTH_LONG).show();
+                intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_support:
-                //TODO: crear el fragment para el soporte de usuario
+                //Vista del fragment support
                 Snackbar.make(this.getCurrentFocus(),R.string.support, Snackbar.LENGTH_LONG).show();
+                SupportFragment supportFragment = SupportFragment.newInstance("unParametro", "OtroParametro");
+                manager.beginTransaction()
+                        .replace(R.id.relative_layout_for_fragment, supportFragment, supportFragment.getTag())
+                        .commit();
+                toolbar.setTitle(R.string.support);
                 break;
 
             case R.id.nav_version:

@@ -21,6 +21,7 @@
     <string name="statistics">Mis estadisticas</string>
     <string name="name">Marwil Campos</string>
     <string name="mail">marwilcampos@gmail.com</string>
+    <string name="tradings">Tradings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -30,4 +31,66 @@
     <string name="dummy_level">No Level</string>
     <string name="dummy_date">May 14, 2018</string>
     <string name="dummy_response">1 hour</string>
+    <string name="response_rate">Response rate</string>
+    <string name="tradding_complete">Trad complete</string>
+    <string name="on_time_delivery">On-time Delivery</string>
+    <string name="positive_rating">Positive Rating</string>
+    <string name="personal_balance">Personal Balance</string>
+    <string name="view_details">View Details</string>
+    <string name="dummy_balance">5</string>
+    <string name="avg_trading">Avg. trading</string>
+    <string name="dummy_avg">3</string>
+    <string name="pending_trading">Pending Trading</string>
+    <string name="dummy_trading">2</string>
+    <string name="trading_in_month">Trading in may</string>
+    <string name="dummy_trading_month">2</string>
+    <string name="active_tradings">Active Tradings</string>
+    <string name="dummy_active_trading">1</string>
+    <string name="cancelled_tradings">Cancelled tradings</string>
+    <string name="dummy_cancelled_tradings">0</string>
+    <string name="todos">To-Dos</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id egestas quam. Vestibulum sed odio tincidunt......</string>
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit......</string>
+    <string name="n_todos">1</string>
+    <string name="mc">MC</string>
+
+    <string name="user_name">marwilc</string>
+    <string name="dummy_date_inbox">1 months ago</string>
+    <string name="online">online</string>
+    <string name="user_info">User Information</string>
+    <string name="from">From</string>
+    <string name="country">Venezuela</string>
+    <string name="speaks">Speaks</string>
+    <string name="english">English</string>
+    <string name="description">Description</string>
+
+    <string-array name="user_names">
+        <item>MarwilC</item>
+        <item>NadiamCorp</item>
+        <item>JuliamCox</item>
+        <item>JeanPierre</item>
+        <item>IrinaRan</item>
+        <item>XenialXes</item>
+        <item>BeaverBar</item>
+        <item>JunoJummy</item>
+        <item>SanSen</item>
+        <item>LexLuttor</item>
+        <item>ThorMarx</item>
+    </string-array>
+    <string-array name="items_support">
+        <item>Help</item>
+        <item>Leave feedback</item>
+        <item>Forum</item>
+        <item>Blog</item>
+    </string-array>
+
+    <string-array name="items_settings">
+        <item>Notifications</item>
+        <item>Notifications sound</item>
+        <item>Terms of service</item>
+        <item>Privacy policy</item>
+        <item>Out of Office mode</item>
+        <item>Logout</item>
+    </string-array>
 </resources>

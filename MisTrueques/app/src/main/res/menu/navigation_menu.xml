@@ -4,6 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <!--
+    <item
+        android:id="@+id/profile"
+        android:title="@string/account"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:icon="@drawable/profilefinal"
+        >
+
+    </item>
+    -->
     <!--Item home-->
     <item android:id="@+id/nav_home"
         android:title="@string/home"
@@ -29,13 +40,15 @@
         <item android:id="@+id/nav_status"
             android:title="@string/status"
             android:icon="@drawable/ic_menu_status"
+            app:actionLayout="@layout/switch_layout"
+            android:checkable="false"
             />
 
     </group>
 
     <!--Item sales-->
     <item android:id="@+id/nav_sales"
-        android:title="@string/sales"
+        android:title="@string/app_name"
         android:icon="@drawable/ic_menu_sales"
         />
 

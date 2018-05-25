@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:padding="6dp"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:text="@string/personal_balance"
+                style="@style/MyTextViewCarView"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingRight="16dp"
+                android:paddingEnd="16dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trading_in_month"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_balance"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_trading_month"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/avg_trading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/active_tradings"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_avg"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_active_trading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </TableRow>
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/pending_trading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/cancelled_tradings"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_trading"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+            <TextView
+                style="@style/MyTextViewCarView"
+                android:text="@string/dummy_cancelled_tradings"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+
+</android.support.v7.widget.CardView>

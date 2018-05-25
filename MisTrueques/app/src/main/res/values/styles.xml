@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPurple">#6D6DFB</item>
     </style>
 
     <style name="MenuListStyle">
@@ -18,22 +17,55 @@
     <style name="MyTextViewStyleH1">
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
 
     </style>
-    <style name="MyTextViewStyleH2" parent="MyTextViewStyleH1">s
-        <item name="android:textSize">15sp</item>
+    <style name="MyTextViewStyleH2" parent="MyTextViewStyleH1">
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="MyTextViewStyleH2Gray" parent="MyTextViewStyleH2">
-        <item name="android:textColor">@color/cardview_shadow_start_color</item>
+        <item name="android:textColor">@color/gray</item>
 
     </style>
 
     <style name="MyTextViewStyleH2Purple" parent="MyTextViewStyleH2">
-        <item name="android:textColor">#6D6DFB</item>
+        <item name="android:textColor">@color/colorPrimary</item>
 
+    </style>
+
+
+
+    <style name="MyTextViewCarView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+
+    </style>
+
+    <style name="MyTextViewStyleBlack">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+
+    </style>
+
+    <style name="MyTextViewStyleGreen">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+    </style>
+
+    <style name="MyTextViewStyleGreenLight">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGreenLight</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
+    </style>
+
+    <style name="MyTextViewStyleH2.wrap.center" parent="MyTextViewStyleH2">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:scrollHorizontally">false</item>
     </style>
 
 
